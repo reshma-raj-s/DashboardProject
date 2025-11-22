@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Carooa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="https://img.icons8.com/?size=512&id=23264&format=png" class="logo-icon">
+            <h2>carooa</h2>
+        </div>
+
+        <ul class="menu">
+            <li class="active"><span>📊</span> Dashboard</li>
+            <li><span>📦</span> Product Management</li>
+            <li><span>🧾</span> Order Management</li>
+            <li><span>↩️</span> Returns & Refunds</li>
+            <li><span>📦</span> Inventory Management</li>
+            <li><span>💰</span> Payments & Earnings</li>
+            <li><span>⭐</span> Ratings & Reviews</li>
+            <li><span>👤</span> Profile & KYC</li>
+            <li><span>❓</span> Support/Help</li>
+            <li><span>⚙️</span> Account Settings</li>
+        </ul>
+
+        <div class="logout">
+            <span>🚪</span> Logout
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <header class="topbar">
+            <h1>Dashboard</h1>
+            <div class="user">
+                <img src="https://img.icons8.com/ios-filled/512/user.png" class="user-icon">
+                <span>Sandra</span>
+            </div>
+        </header>
+
+        <!-- TOP CARDS -->
+        <section class="cards">
+            <div class="card">
+                <h4>Total Sales</h4>
+                <p>92.6k</p>
+            </div>
+            <div class="card">
+                <h4>Total Products</h4>
+                <p>9</p>
+            </div>
+            <div class="card">
+                <h4>Total Profit</h4>
+                <p>92.6k</p>
+            </div>
+        </section>
+
+        <!-- SALES TRENDS -->
+        <section class="sales-section">
+            <div class="sales-left">
+                <h2>Sales Trends</h2>
+                <h3 class="amount">₹92,582</h3>
+
+                <canvas id="salesChart"></canvas>
+
+                <p class="download">Download Report</p>
+            </div>
+
+            <div class="sales-right">
+                <div class="monthly-orders-box">
+    <h3>📈 Monthly Orders</h3>
+    <div class="orders-count">17</div>
+
+    <div class="month-indicators">
+        <div class="indicator">
+            <span class="line clr1"></span>
+            <p>2025-04</p>
+        </div>
+
+        <div class="indicator">
+            <span class="line clr2"></span>
+            <p>2025-05</p>
+        </div>
+
+        <div class="indicator">
+            <span class="dot clr3"></span>
+            <p>2025-10</p>
+        </div>
+    </div>
+
+    <a href="#" class="download-link">Download Report</a>
+</div>
+ 
+            
+
+
+            </div>
+        </section>
+
+        <!-- PRODUCT OVERVIEW -->
+        <section class="overview">
+            <div class="overview-left">
+                <h3>Products Overview</h3>
+
+                <canvas id="donutChart"></canvas>
+
+                <ul class="legend">
+                    <li><span class="dot pink"></span> In Stock — 6</li>
+                    <li><span class="dot purple"></span> Low Stock — 3</li>
+                    <li><span class="dot blue"></span> Out of Stock — 0</li>
+                </ul>
+
+                <p class="download">Download Report</p>
+            </div>
+
+            <!-- RECENT ORDERS -->
+            <div class="orders-table">
+                <h3>Recent Orders</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Order</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>7</td><td>07</td><td>10/6/2025</td><td class="cancel">cancelled</td><td>$295</td></tr>
+                        <tr><td>8</td><td>08</td><td>10/6/2025</td><td class="cancel">cancelled</td><td>$219</td></tr>
+                        <tr><td>9</td><td>09</td><td>10/6/2025</td><td class="ok">confirmed</td><td>$295</td></tr>
+                        <tr><td>10</td><td>10</td><td>10/7/2025</td><td class="ok">confirmed</td><td>$295</td></tr>
+                        <tr><td>11</td><td>11</td><td>10/7/2025</td><td class="ok">confirmed</td><td>$6658</td></tr>
+                        <tr><td>12</td><td>12</td><td>10/7/2025</td><td class="ok">confirmed</td><td>$6658</td></tr>
+                        <tr><td>13</td><td>13</td><td>10/7/2025</td><td class="cancel">cancelled</td><td>$236</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
